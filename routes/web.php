@@ -1,6 +1,7 @@
 <?php
 
 use App\Http\Controllers\Admin\HomeController;
+use App\Http\Controllers\Admin\UserController;
 use App\Http\Controllers\ThemeController;
 use Illuminate\Support\Facades\Route;
 
@@ -56,6 +57,12 @@ ROUTE::match(['patch', 'put'],'/themes/{theme}','ThemeController@update')->name(
 //destory
 ROUTE::delete('/themes/{theme}/','ThemeController@destroy')->name('themes.destroy');
 
+
+
+Route::get('/users' , 'UserController@index')->name('users.index');
+
+Route::get('/users/{user}/edit' , 'UserController@edit')->name('users.edit');
+Route::match(['patch', 'put'],'/users/{user}' , 'UserController@update')->name('users.update');
 
 
 

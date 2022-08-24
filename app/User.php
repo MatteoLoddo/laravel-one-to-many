@@ -36,4 +36,11 @@ class User extends Authenticatable
     protected $casts = [
         'email_verified_at' => 'datetime',
     ];
+
+    // funzione che recupera i dettagli degli utenti
+    public function details()
+    {
+        
+        return $this->hasOne('App\UserDetail');
+    }
 }

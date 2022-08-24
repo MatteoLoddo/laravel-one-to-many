@@ -9,6 +9,9 @@
                 <li class="nav-item">
                     <a class="nav-link text-light" href="{{ route('admin.themes.index') }}">Temi</a>
                 </li>
+                <li class="nav-item">
+                    <a class="nav-link text-light" href="{{route('admin.users.index')}}">Utenti</a>
+                </li>
                 <li>
             @if (Route::has('login'))
             @include('partials.login')
